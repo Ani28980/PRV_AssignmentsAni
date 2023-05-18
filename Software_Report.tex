@@ -1,0 +1,68 @@
+\documentclass{article}
+\usepackage{listings}
+\usepackage{xcolor}
+
+\title{Music Player - Report}
+\author{Anirudh Saikrishnan}
+\date{\today}
+
+\definecolor{codebg}{RGB}{240,240,240}
+\lstset{
+    backgroundcolor=\color{codebg},
+    basicstyle=\footnotesize\ttfamily,
+    breaklines=true,
+    keywordstyle=\color{blue},
+    stringstyle=\color{orange},
+    commentstyle=\color{gray},
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    stepnumber=1,
+    numbersep=5pt,
+    captionpos=b,
+    frame=tb
+}
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+In this report, we will discuss a Python program that allows users to play songs and shuffle the playlist. The program utilizes the Pygame library for audio playback and does not rely on the random library for shuffling songs.
+
+\section{Program Overview}
+The Python program consists of the following key components:
+
+\begin{itemize}
+    \item The main function: This function serves as the entry point of the program. It initializes the Pygame mixer, sets the volume, and handles the user interaction.
+    \item The Shuffle class: This class extends the list class and provides a custom shuffling algorithm using the numpy library. It takes a seed value to generate random numbers for shuffling the playlist.
+    \item The play\_song function: This function is responsible for playing a song using the Pygame mixer. It also includes the functionality to pause and resume the song based on user input.
+\end{itemize}
+
+\section{Usage}
+To use the program, follow these steps:
+
+\begin{enumerate}
+    \item Ensure that you have the Pygame library installed.
+    \item Create a directory called "Songs" and place your MP3 files in it.
+    \item Run the Python program.
+    \item Enter "start" to start the program and begin playing songs.
+    \item Once the program is running, you can enter the following commands:
+    \begin{itemize}
+        \item "pause": Pause the currently playing song.
+        \item "play": Resume playback of the paused song.
+        \item "next": Skip to the next song in the playlist.
+        \item "prev": Go back to the previous song in the playlist.
+        \item "shuffle": Shuffle the playlist and start playing from the beginning.
+        \item "quit": Exit the program.
+    \end{itemize}
+\end{enumerate}
+
+\section{Code Listing}
+Below is the complete Python code for the program:
+
+\lstinputlisting[language=Python]{MusicPlayer.py}
+
+\section{Conclusion}
+In this report, we have discussed a Python program that enables users to play songs with shuffle functionality. The program utilizes the Pygame library for audio playback and incorporates a custom shuffling algorithm without relying on the random library. With this program, users can enjoy playing their favorite songs in a shuffled order and control the playback using simple commands.
+
+\end{document}
+
