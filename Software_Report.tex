@@ -1,6 +1,12 @@
 \documentclass{article}
 \usepackage{listings}
 \usepackage{xcolor}
+\usepackage[margin=1in]{geometry} % Set margins to 1 inch
+\usepackage{graphicx} % Allows including images
+\usepackage{float} % Allows for precise placement of figures
+\usepackage{amsmath} % Allows for math equations
+\usepackage{siunitx} % Allows for SI units
+\usepackage{placeins} % Makes sure images are in their respective sections by \FloatBarrier
 
 \title{Music Player - Report}
 \author{Anirudh Saikrishnan}
@@ -63,6 +69,13 @@ Below is the complete Python code for the program:
 
 \section{Conclusion}
 In this report, we have discussed a Python program that enables users to play songs with shuffle functionality. The program utilizes the Pygame library for audio playback and incorporates a custom shuffling algorithm without relying on the random library. With this program, users can enjoy playing their favorite songs in a shuffled order and control the playback using simple commands.
+
+\begin{figure}[ht]
+        \centering
+        \includegraphics[width=1\linewidth]{Terminal.jpeg}
+        \caption{Music Player Functionality}
+        \label{fig:view}
+\end{figure}
 
 \end{document}
 
